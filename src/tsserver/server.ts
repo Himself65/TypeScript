@@ -484,7 +484,7 @@ namespace ts.server {
         private constructed: boolean | undefined;
 
         constructor() {
-            const event: Event | undefined = (body: object, eventName: string) => {
+            const event: Event = (body: object, eventName: string) => {
                 if (this.constructed) {
                     this.event(body, eventName);
                 }
